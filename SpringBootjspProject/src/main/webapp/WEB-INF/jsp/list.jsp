@@ -40,6 +40,11 @@ p{
       </div>
     </c:forEach>
    </div>
+   <div class="row text-center" style="margin-top: 10px">
+     <a href="/list?page=${curpage>1?curpage-1:curpage }" class="btn btn-sm btn-primary">이전</a>
+      ${curpage } page / ${totalpage } pages
+     <a href="/list?page=${curpage<totalpage?curpage+1:curpage }" class="btn btn-sm btn-primary">다음</a>
+   </div>
   </div>
 </body>
 </html>

@@ -31,4 +31,11 @@ public class FoodController {
 	  model.addAttribute("totalpage", totalpage);
 	  return "list";
   }
+  @GetMapping("/detail")
+  public String food_detail(@RequestParam("fno") int fno,Model model)
+  {
+	  FoodVO vo=fService.FoodDetailData(fno);
+	  model.addAttribute("vo", vo);
+	  return "detail";
+  }
 }
