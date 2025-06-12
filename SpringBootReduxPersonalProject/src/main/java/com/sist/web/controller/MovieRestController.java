@@ -40,7 +40,6 @@ public class MovieRestController {
    @GetMapping("/movie/list_react" )
    public Map movie_list_data(@RequestParam("page") int page) throws Exception
    {
-	   System.out.println("adsfasfasfsafsafsdfsdf");
 	   Map map=new HashMap();
 	   int rowSize=12;
 	   int start=(page-1)*rowSize;
